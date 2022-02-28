@@ -1,0 +1,13 @@
+.output {
+    width: 100%;
+    background-color: $screen-background-t1;
+    height: 5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    @include flex(center, center, row);
+}
+#output__number {
+    position: absolute;
+    right: 7.5%;
+    transform: translateY(10%);
+}

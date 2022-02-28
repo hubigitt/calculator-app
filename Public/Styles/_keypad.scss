@@ -1,0 +1,133 @@
+#7 {
+    grid-area: 7;
+}
+#8 {
+    grid-area: 8;
+}
+#9 {
+    grid-area: 9;
+}
+#del {
+    grid-area: del;
+}
+#4 {
+    grid-area: 4;
+}
+#5 {
+    grid-area: 5;
+}
+#6 {
+    grid-area: 6;
+}
+#add {
+    grid-area: add;
+}
+#1 {
+    grid-area: 1;
+}
+#2 {
+    grid-area: 2;
+}
+#3 {
+    grid-area: 3;
+}
+#subtract {
+    grid-area: subtract;
+}
+#dot {
+    grid-area: dot;
+}
+#0 {
+    grid-area: 0;
+}
+#divide {
+    grid-area: divide;
+}
+#multiply {
+    grid-area: multiply;
+}
+#reset {
+    grid-area: reset;
+}
+#equals {
+    grid-area: equals;
+}
+
+.keypad {
+    margin-top: 1.5rem;
+    width: 100%;
+    min-height: 60vh;
+    background-color: $keypad-background-t1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "7 8 9 del"
+        "4 5 6 add"
+        "1 2 3 subtract"
+        "dot 0 divide multiply"
+        "reset reset equals equals";
+    grid-gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    z-index: 0;
+}
+.keypad__button {
+    background-color: $go-key-background-t1;
+    color: $dark-text-t1;
+    font-size: $font-size - 10;
+    font-family: $font-family;
+    border-radius: 0.5rem;
+    border: none;
+    position: relative;
+}
+.keypad__button::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background-color: $go-key-shadow-t1;
+}
+#del {
+    font-size: 18px;
+    color: $white-text-t1;
+    background-color: $db-key-background-t1;
+}
+#del::before {
+    background-color: $db-key-shadow-t1;
+}
+#reset,
+#equals {
+    position: relative;
+    height: 4rem;
+    color: $white-text-t1;
+    border-radius: 0.5rem;
+}
+#reset {
+    background-color: $db-key-background-t1;
+    font-size: 18px;
+}
+#reset::before,
+#equals::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+}
+#equals {
+    background-color: $r-key-background-t1;
+}
+#equals::before {
+    background-color: $r-key-shadow-t1;
+}
+#reset::before {
+    background-color: $db-key-shadow-t1;
+}

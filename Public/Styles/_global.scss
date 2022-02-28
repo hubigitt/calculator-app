@@ -1,0 +1,65 @@
+//widths
+
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+//colors
+
+//theme1
+
+//backgrouds
+$main-background-t1: hsl(222, 26%, 31%);
+$keypad-background-t1: hsl(223, 31%, 20%);
+$screen-background-t1: hsl(224, 36%, 15%);
+//keys
+$db-key-background-t1: hsl(225, 21%, 49%);
+$db-key-shadow-t1: hsl(224, 28%, 35%);
+$r-key-background-t1: hsl(6, 63%, 50%);
+$r-key-shadow-t1: hsl(6, 70%, 34%);
+$go-key-background-t1: hsl(30, 25%, 89%);
+$go-key-shadow-t1: hsl(28, 16%, 65%);
+//text
+$dark-text-t1: hsl(221, 14%, 31%);
+$white-text-t1: hsl(0, 0, 100%);
+
+//theme2
+
+//backgrounds
+$main-background-t2: hsl(0, 0%, 90%);
+$keypad-background-t2: hsl(0, 5%, 81%);
+$screen-background-t2: hsl(0, 0%, 93%);
+//keys
+$dc-key-background-t2: hsl(185, 42%, 37%);
+$dc-key-shadow-t2: hsl(185, 58%, 25%);
+$o-key-background-t2: hsl(25, 98%, 40%);
+$do-key-shadow-t2: hsl(25, 99%, 27%);
+$gy-key-background: hsl(45, 7%, 89%);
+$go-key-shadow: hsl(35, 11%, 61%);
+//text
+$dark-text-t2: hsl(60, 10%, 19%);
+$white-text-t2: $white-text-t1;
+
+//fonts
+$font-size: 32px;
+$font-family: "Spartan", sans-serif;
+
+//mixins
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+//global styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $main-background-t1;
+}

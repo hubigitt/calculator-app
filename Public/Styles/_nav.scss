@@ -1,0 +1,47 @@
+.nav {
+    @include flex(space-between, center, row);
+    h1 {
+        position: absolute;
+        left: 5%;
+        top: 2%;
+    }
+    h6 {
+        margin-right: 0.5rem;
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+    width: 100%;
+    min-height: 10vh;
+}
+.nav__theme {
+    @include flex(center, center, row);
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+.nav__theme__toggler {
+    @include flex(center, center, column);
+    font-size: 10px;
+}
+.nav__theme__toggler__labels {
+    letter-spacing: 0.125rem;
+    margin-bottom: 0.25rem;
+}
+.nav__theme__toggler__slider {
+    width: 3rem;
+    height: 1rem;
+    background-color: $keypad-background-t1;
+    border-radius: 1.5rem;
+    position: relative;
+}
+.nav__theme__toggler__slider::before {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    content: "";
+    background-color: $r-key-shadow-t1;
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    border-radius: 1rem;
+    transform: translateY(12.5%);
+}
