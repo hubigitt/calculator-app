@@ -87,32 +87,33 @@
     height: 100%;
     position: absolute;
     right: 0%;
-    top: 5%;
+    top: 0%;
+    transform: translateY(5%);
     border-radius: 0.5rem;
     z-index: -1;
     background-color: $go-key-shadow-t1;
 }
-#del {
+.keypad__del-button {
     font-size: 18px;
     color: $white-text-t1;
     background-color: $db-key-background-t1;
 }
-#del::before {
+.keypad__del-button::before {
     background-color: $db-key-shadow-t1;
 }
-#reset,
-#equals {
+.keypad__reset-button,
+.keypad__equals-button {
     position: relative;
     height: 4rem;
     color: $white-text-t1;
     border-radius: 0.5rem;
 }
-#reset {
+.keypad__reset-button {
     background-color: $db-key-background-t1;
     font-size: 18px;
 }
-#reset::before,
-#equals::before {
+.keypad__reset-button::before,
+.keypad__equals-button::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -122,12 +123,12 @@
     border-radius: 0.5rem;
     z-index: -1;
 }
-#equals {
+.keypad__equals-button {
     background-color: $r-key-background-t1;
 }
-#equals::before {
+.keypad__equals-button::before {
     background-color: $r-key-shadow-t1;
 }
-#reset::before {
+.keypad__reset-button::before {
     background-color: $db-key-shadow-t1;
 }

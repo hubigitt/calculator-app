@@ -18,6 +18,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/Public/Styles/styles.css" />
+        <script src="/Public/Scripts/app.js" defer></script>
         <title>Frontend Mentor | Calculator app</title>
     </head>
     <body>
@@ -39,7 +40,9 @@
                 <button id="7" class="keypad__button">7</button>
                 <button id="8" class="keypad__button">8</button>
                 <button id="9" class="keypad__button">9</button>
-                <button id="del" class="keypad__button">DEL</button>
+                <button id="del" class="keypad__button keypad__del-button">
+                    DEL
+                </button>
                 <button id="4" class="keypad__button">4</button>
                 <button id="5" class="keypad__button">5</button>
                 <button id="6" class="keypad__button">6</button>
@@ -52,8 +55,15 @@
                 <button id="0" class="keypad__button">0</button>
                 <button id="divide" class="keypad__button">/</button>
                 <button id="multiply" class="keypad__button">x</button>
-                <button id="reset" class="keypad__button">RESET</button>
-                <button id="equals" class="keypad__button">=</button>
+                <button id="reset" class="keypad__button keypad__reset-button">
+                    RESET
+                </button>
+                <button
+                    id="equals"
+                    class="keypad__button keypad__equals-button"
+                >
+                    =
+                </button>
             </div>
         </section>
     </body>
