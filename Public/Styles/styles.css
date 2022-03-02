@@ -290,6 +290,18 @@ body {
   position: relative;
 }
 
+.keypad__button--active {
+  background-color: #eae3dc;
+  color: #444b5a;
+  font-size: 22px;
+  font-family: "Spartan", sans-serif;
+  border-radius: 0.5rem;
+  border: none;
+  position: relative;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+}
+
 .keypad__button::before {
   content: "";
   width: 100%;

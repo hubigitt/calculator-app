@@ -81,6 +81,18 @@
     border: none;
     position: relative;
 }
+
+.keypad__button--active {
+    background-color: $go-key-background-t1;
+    color: $dark-text-t1;
+    font-size: $font-size - 10;
+    font-family: $font-family;
+    border-radius: 0.5rem;
+    border: none;
+    position: relative;
+    transform: translateY(5%);
+}
+
 .keypad__button::before {
     content: "";
     width: 100%;
