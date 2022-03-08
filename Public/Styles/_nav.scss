@@ -2,7 +2,8 @@
     @include flex(space-between, center, row);
     h1 {
         position: absolute;
-        left: 5%;
+        left: 0%;
+        transform: translateX(5%);
         top: 2%;
     }
     h6 {
@@ -16,7 +17,8 @@
 .nav__theme {
     @include flex(center, center, row);
     position: absolute;
-    right: 5%;
+    right: 0%;
+    transform: translateX(-5%);
     top: 5%;
 }
 .nav__theme__toggler {

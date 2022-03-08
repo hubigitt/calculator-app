@@ -6,4 +6,15 @@
     height: 100vh;
     width: 90%;
     margin: auto;
+    position: relative;
+}
+@media screen and (max-width: $desktop-width) and (min-width: $tablet-width) {
+    .app {
+        width: 60%;
+    }
+}
+@media screen and (min-width: $desktop-width) {
+    .app {
+        width: 40%;
+    }
 }
