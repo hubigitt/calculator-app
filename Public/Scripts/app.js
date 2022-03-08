@@ -1,10 +1,31 @@
 const keypad = document.querySelector(".keypad");
 const screen = document.getElementById("output__number");
 const resetBtn = document.getElementById("reset");
+const themeSlider = document.querySelector(".nav__theme__toggler__slider");
+const themeSliderDot = themeSlider.firstElementChild;
+
+console.log(themeSlider);
 
 let memory = "";
 let digits = "";
 let activeOperation;
+let currentTheme;
+
+//THEME
+function changeThemeHandler() {
+    const dot = themeSliderDot;
+    const current = parseInt(
+        themeSliderDot.className.charAt(themeSliderDot.className.length - 1)
+    );
+    if (current === 3) {
+        newClassName = "nav__theme__toggler__slider--1";
+        currentTheme = 1;
+    } else {
+        newClassName = `nav__theme__toggler__slider--${current + 1}`;
+        currentTheme = current + 1;
+    }
+    dot.className = newClassName;
+}
 
 //UTILITY FUNCTIONS
 function renderResult() {
@@ -14,6 +35,7 @@ function renderResult() {
         screen.textContent = digits;
         console.log(digits, typeof digits);
     }
+    console.log("Current theme is: " + currentTheme);
 }
 function pushToMemory() {
     if (digits.length != 0) {
@@ -22,7 +44,7 @@ function pushToMemory() {
     }
     renderResult();
 }
-function changeHandler(result) {
+function setResult(result) {
     digits = result;
     document.querySelector(".keypad__button--active").className =
         "keypad__button";
@@ -42,15 +64,15 @@ function activateOperationButton(button) {
 //CALCULATOR FUNCTIONS
 function add(a, b) {
     const result = a + b;
-    changeHandler(result);
+    setResult(result.toFixed(3));
 }
 function subtract(a, b) {
     const result = a - b;
-    changeHandler(result);
+    setResult(result.toFixed(3));
 }
 function multiply(a, b) {
     const result = a * b;
-    changeHandler(result);
+    setResult(result.toFixed(3));
 }
 function divide(a, b) {
     if (a === 0 || b === 0) {
@@ -61,7 +83,7 @@ function divide(a, b) {
         alert("You can't divide by 0 fool!");
     } else {
         const result = a / b;
-        changeHandler(result);
+        setResult(result.toFixed(3));
     }
 }
 function equals(operator) {
@@ -80,6 +102,7 @@ function equals(operator) {
         divide(a, b);
     }
 }
+//EVENT LISTENERS
 
 keypad.addEventListener("click", (event) => {
     const button = event.target;
@@ -135,3 +158,4 @@ keypad.addEventListener("click", (event) => {
         }
     }
 });
+themeSlider.addEventListener("click", changeThemeHandler);
