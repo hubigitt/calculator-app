@@ -1,12 +1,21 @@
 .app {
     font-size: $font-size;
     font-family: $font-family;
-    color: $white-text-t1;
+    // color: $white-text-t1;
     @include flex(center, center, column);
     height: 100vh;
     width: 90%;
     margin: auto;
     position: relative;
+}
+.app--theme1 {
+    color: $white-text-t1;
+}
+.app--theme2 {
+    color: $dark-text-t2;
+}
+.app--theme3 {
+    color: $light-yellow-text-t3;
 }
 @media screen and (max-width: $desktop-width) and (min-width: $tablet-width) {
     .app {

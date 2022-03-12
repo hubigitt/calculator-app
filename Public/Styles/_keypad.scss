@@ -57,7 +57,6 @@
     margin-top: 1.5rem;
     width: 100%;
     min-height: 60vh;
-    background-color: $keypad-background-t1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -70,30 +69,52 @@
     grid-gap: 1rem;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    z-index: 0;
+    z-index: 1;
+}
+.keypad--theme1 {
+    background-color: $keypad-background-t1;
+}
+.keypad--theme2 {
+    background-color: $keypad-background-t2;
+}
+.keypad--theme3 {
+    background-color: $keypad-background-t3;
 }
 .keypad__button {
-    background-color: $go-key-background-t1;
-    color: $dark-text-t1;
     font-size: $font-size - 10;
     font-family: $font-family;
     border-radius: 0.5rem;
     border: none;
     position: relative;
+}
+.keypad__button--theme1 {
+    background-color: $go-key-background-t1;
+    color: $dark-text-t1;
+}
+.keypad__button--theme2 {
+    background-color: $gy-key-background-t2;
+    color: $dark-text-t2;
+}
+.keypad__button--theme3 {
+    background-color: $vdv-key-background-t3;
+    color: $light-yellow-text-t3;
 }
 
 .keypad__button--active {
-    background-color: $go-key-background-t1;
-    color: $dark-text-t1;
-    font-size: $font-size - 10;
-    font-family: $font-family;
-    border-radius: 0.5rem;
-    border: none;
-    position: relative;
+    // font-size: $font-size - 10;
+    // font-family: $font-family;
+    // border-radius: 0.5rem;
+    // border: none;
+    // position: relative;
     transform: translateY(5%);
+    // z-index: 1;
 }
+// .keypad__button--active--theme1 {
+//     background-color: $go-key-background-t1;
+//     color: $dark-text-t1;
+// }
 
-.keypad__button::before {
+.keypad__button--theme1::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -105,27 +126,80 @@
     z-index: -1;
     background-color: $go-key-shadow-t1;
 }
+.keypad__button--theme2::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    transform: translateY(5%);
+    border-radius: 0.5rem;
+    z-index: -1;
+    background-color: $go-key-shadow-t2;
+}
+.keypad__button--theme3::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    transform: translateY(5%);
+    border-radius: 0.5rem;
+    z-index: -1;
+    background-color: $dm-key-shadow-t3;
+}
 .keypad__del-button {
     font-size: 18px;
+}
+.keypad__del-button--theme1 {
     color: $white-text-t1;
     background-color: $db-key-background-t1;
 }
-.keypad__del-button::before {
-    background-color: $db-key-shadow-t1;
+.keypad__del-button--theme2 {
+    color: $white-text-t2;
+    background-color: $dc-key-background-t2;
+}
+.keypad__del-button--theme3 {
+    color: $white-text-t3;
+    background-color: $dv-key-background-t3;
 }
 .keypad__reset-button,
 .keypad__equals-button {
     position: relative;
     height: 4rem;
-    color: $white-text-t1;
     border-radius: 0.5rem;
 }
 .keypad__reset-button {
-    background-color: $db-key-background-t1;
     font-size: 18px;
 }
-.keypad__reset-button::before,
-.keypad__equals-button::before {
+.keypad__reset-button--theme1 {
+    color: $white-text-t1;
+    background-color: $db-key-background-t1;
+}
+.keypad__reset-button--theme2 {
+    color: $white-text-t2;
+    background-color: $dc-key-background-t2;
+}
+.keypad__reset-button--theme3 {
+    color: $white-text-t3;
+    background-color: $dv-key-background-t3;
+}
+.keypad__equals-button--theme1 {
+    color: $white-text-t1;
+    background-color: $r-key-background-t1;
+}
+.keypad__equals-button--theme2 {
+    color: $white-text-t2;
+    background-color: $o-key-background-t2;
+}
+.keypad__equals-button--theme3 {
+    color: $white-text-t3;
+    background-color: $pc-key-background-t3;
+}
+.keypad__reset-button--theme1::before,
+.keypad__equals-button--theme1::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -134,13 +208,68 @@
     top: 5%;
     border-radius: 0.5rem;
     z-index: -1;
+    background: $vm-key-shadow-t3;
 }
-.keypad__equals-button {
-    background-color: $r-key-background-t1;
+.keypad__reset-button--theme2::before,
+.keypad__del-button--theme2::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: $dc-key-shadow-t2;
 }
-.keypad__equals-button::before {
+.keypad__reset-button--theme3::before,
+.keypad__del-button--theme3::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: $vm-key-shadow-t3;
+}
+.keypad__equals-button--theme2::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: $do-key-shadow-t2;
+}
+.keypad__equals-button--theme3::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: $sc-key-shadow-t3;
+}
+.keypad__del-button--theme1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background-color: $db-key-shadow-t1;
+}
+.keypad__equals-button--theme1::before {
     background-color: $r-key-shadow-t1;
 }
-.keypad__reset-button::before {
+.keypad__reset-button--theme1::before {
     background-color: $db-key-shadow-t1;
 }

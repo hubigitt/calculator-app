@@ -9,22 +9,29 @@ console.log(themeSlider);
 let memory = "";
 let digits = "";
 let activeOperation;
-let currentTheme;
+let currentTheme = 1;
 
 //THEME
+setTheme(currentTheme);
+
 function changeThemeHandler() {
-    const dot = themeSliderDot;
+    // const dot = themeSliderDot;
     const current = parseInt(
         themeSliderDot.className.charAt(themeSliderDot.className.length - 1)
     );
     if (current === 3) {
-        newClassName = "nav__theme__toggler__slider--1";
+        // newClassName = "nav__theme__toggler__slider--1";
+        // newClassName2 = "nav__theme__toggler__slider--1--theme1";
         currentTheme = 1;
     } else {
-        newClassName = `nav__theme__toggler__slider--${current + 1}`;
+        // newClassName = `nav__theme__toggler__slider--${current + 1}`;
+        // newClassName2 = `nav__theme__toggler__slider--${current + 1}--theme${
+        //     current + 1
+        // }`;
         currentTheme = current + 1;
     }
-    dot.className = newClassName;
+    // dot.className = `${newClassName} ${newClassName2}`;
+    setTheme(currentTheme);
 }
 
 //UTILITY FUNCTIONS
@@ -35,7 +42,6 @@ function renderResult() {
         screen.textContent = digits;
         console.log(digits, typeof digits);
     }
-    console.log("Current theme is: " + currentTheme);
 }
 function pushToMemory() {
     if (digits.length != 0) {
@@ -46,18 +52,19 @@ function pushToMemory() {
 }
 function setResult(result) {
     digits = result;
-    document.querySelector(".keypad__button--active").className =
-        "keypad__button";
+    document
+        .querySelector(".keypad__button--active")
+        .classList.remove("keypad__button--active");
     renderResult();
 }
 function deactivateButtons() {
     const buttons = document.querySelectorAll(".keypad__button--active");
     buttons.forEach((button) => {
-        button.className = "keypad__button";
+        button.classList.remove("keypad__button--active");
     });
 }
 function activateOperationButton(button) {
-    button.className = "keypad__button--active";
+    button.classList.add("keypad__button--active");
     activeOperation = button.id;
 }
 
@@ -77,8 +84,9 @@ function multiply(a, b) {
 function divide(a, b) {
     if (a === 0 || b === 0) {
         digits = memory;
-        document.querySelector(".keypad__button--active").className =
-            "keypad__button";
+        document
+            .querySelector(".keypad__button--active")
+            .classList.remove("keypad__button--active");
         renderResult();
         alert("You can't divide by 0 fool!");
     } else {
@@ -139,6 +147,7 @@ keypad.addEventListener("click", (event) => {
             case "reset":
                 digits = "";
                 memory = "";
+                deactivateButtons();
                 renderResult();
                 break;
             case "equals":
@@ -158,4 +167,5 @@ keypad.addEventListener("click", (event) => {
         }
     }
 });
+
 themeSlider.addEventListener("click", changeThemeHandler);

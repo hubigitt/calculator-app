@@ -13,7 +13,6 @@ body {
 .app {
   font-size: 32px;
   font-family: "Spartan", sans-serif;
-  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +32,18 @@ body {
   position: relative;
 }
 
+.app--theme1 {
+  color: white;
+}
+
+.app--theme2 {
+  color: #35352c;
+}
+
+.app--theme3 {
+  color: #ffe53d;
+}
+
 @media screen and (max-width: 1440px) and (min-width: 700px) {
   .app {
     width: 60%;
@@ -47,7 +58,6 @@ body {
 
 .output {
   width: 100%;
-  background-color: #182034;
   height: 5rem;
   border-radius: 0.5rem;
   position: relative;
@@ -64,6 +74,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.output--theme1 {
+  background-color: #182034;
+}
+
+.output--theme2 {
+  background-color: #ededed;
+}
+
+.output--theme3 {
+  background-color: #1d0934;
 }
 
 #output__number {
@@ -151,22 +173,36 @@ body {
 .nav__theme__toggler__slider {
   width: 3rem;
   height: 1rem;
-  background-color: #232c43;
   border-radius: 1.5rem;
   position: relative;
+}
+
+.nav__theme__toggler__slider--theme1 {
+  background-color: #232c43;
+}
+
+.nav__theme__toggler__slider--theme2 {
+  background-color: #d1cccc;
+}
+
+.nav__theme__toggler__slider--theme3 {
+  background-color: #1d0934;
 }
 
 .nav__theme__toggler__slider--1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   content: "";
-  background-color: #93261a;
   width: 0.8rem;
   height: 0.8rem;
   position: absolute;
   border-radius: 1rem;
   -webkit-transform: translateY(12.5%);
           transform: translateY(12.5%);
+}
+
+.nav__theme__toggler__slider--1--theme1 {
+  background-color: #93261a;
 }
 
 .nav__theme__toggler__slider--2 {
@@ -182,6 +218,10 @@ body {
           transform: translate(100%, 12.5%);
 }
 
+.nav__theme__toggler__slider--2--theme2 {
+  background-color: #893901;
+}
+
 .nav__theme__toggler__slider--3 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -193,6 +233,10 @@ body {
   border-radius: 1rem;
   -webkit-transform: translate(200%, 12.5%);
           transform: translate(200%, 12.5%);
+}
+
+.nav__theme__toggler__slider--3--theme3 {
+  background-color: #00e0d1;
 }
 
 #7 {
@@ -309,7 +353,6 @@ body {
   margin-top: 1.5rem;
   width: 100%;
   min-height: 60vh;
-  background-color: #232c43;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -320,12 +363,22 @@ body {
   grid-gap: 1rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  z-index: 0;
+  z-index: 1;
+}
+
+.keypad--theme1 {
+  background-color: #232c43;
+}
+
+.keypad--theme2 {
+  background-color: #d1cccc;
+}
+
+.keypad--theme3 {
+  background-color: #1d0934;
 }
 
 .keypad__button {
-  background-color: #eae3dc;
-  color: #444b5a;
   font-size: 22px;
   font-family: "Spartan", sans-serif;
   border-radius: 0.5rem;
@@ -333,19 +386,27 @@ body {
   position: relative;
 }
 
-.keypad__button--active {
+.keypad__button--theme1 {
   background-color: #eae3dc;
   color: #444b5a;
-  font-size: 22px;
-  font-family: "Spartan", sans-serif;
-  border-radius: 0.5rem;
-  border: none;
-  position: relative;
+}
+
+.keypad__button--theme2 {
+  background-color: #e5e4e1;
+  color: #35352c;
+}
+
+.keypad__button--theme3 {
+  background-color: #341c4f;
+  color: #ffe53d;
+}
+
+.keypad__button--active {
   -webkit-transform: translateY(5%);
           transform: translateY(5%);
 }
 
-.keypad__button::before {
+.keypad__button--theme1::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -359,31 +420,96 @@ body {
   background-color: #b4a597;
 }
 
+.keypad__button--theme2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  border-radius: 0.5rem;
+  z-index: -1;
+  background-color: #a69d91;
+}
+
+.keypad__button--theme3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  border-radius: 0.5rem;
+  z-index: -1;
+  background-color: #871c9c;
+}
+
 .keypad__del-button {
   font-size: 18px;
+}
+
+.keypad__del-button--theme1 {
   color: white;
   background-color: #637097;
 }
 
-.keypad__del-button::before {
-  background-color: #404e72;
+.keypad__del-button--theme2 {
+  color: white;
+  background-color: #377f86;
+}
+
+.keypad__del-button--theme3 {
+  color: white;
+  background-color: #58077d;
 }
 
 .keypad__reset-button,
 .keypad__equals-button {
   position: relative;
   height: 4rem;
-  color: white;
   border-radius: 0.5rem;
 }
 
 .keypad__reset-button {
-  background-color: #637097;
   font-size: 18px;
 }
 
-.keypad__reset-button::before,
-.keypad__equals-button::before {
+.keypad__reset-button--theme1 {
+  color: white;
+  background-color: #637097;
+}
+
+.keypad__reset-button--theme2 {
+  color: white;
+  background-color: #377f86;
+}
+
+.keypad__reset-button--theme3 {
+  color: white;
+  background-color: #58077d;
+}
+
+.keypad__equals-button--theme1 {
+  color: white;
+  background-color: #d03f2f;
+}
+
+.keypad__equals-button--theme2 {
+  color: white;
+  background-color: #ca5502;
+}
+
+.keypad__equals-button--theme3 {
+  color: white;
+  background-color: #00e0d1;
+}
+
+.keypad__reset-button--theme1::before,
+.keypad__equals-button--theme1::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -392,17 +518,76 @@ body {
   top: 5%;
   border-radius: 0.5rem;
   z-index: -1;
+  background: #bc15f4;
 }
 
-.keypad__equals-button {
-  background-color: #d03f2f;
+.keypad__reset-button--theme2::before,
+.keypad__del-button--theme2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 5%;
+  border-radius: 0.5rem;
+  z-index: -1;
+  background: #1b5f65;
 }
 
-.keypad__equals-button::before {
+.keypad__reset-button--theme3::before,
+.keypad__del-button--theme3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 5%;
+  border-radius: 0.5rem;
+  z-index: -1;
+  background: #bc15f4;
+}
+
+.keypad__equals-button--theme2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 5%;
+  border-radius: 0.5rem;
+  z-index: -1;
+  background: #893901;
+}
+
+.keypad__equals-button--theme3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 5%;
+  border-radius: 0.5rem;
+  z-index: -1;
+  background: #6cf9f2;
+}
+
+.keypad__del-button--theme1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 5%;
+  border-radius: 0.5rem;
+  z-index: -1;
+  background-color: #404e72;
+}
+
+.keypad__equals-button--theme1::before {
   background-color: #93261a;
 }
 
-.keypad__reset-button::before {
+.keypad__reset-button--theme1::before {
   background-color: #404e72;
 }
 /*# sourceMappingURL=styles.css.map */

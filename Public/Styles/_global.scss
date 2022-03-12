@@ -26,7 +26,7 @@ $white-text-t1: hsl(0, 0, 100%);
 //theme2
 
 //backgrounds
-$main-background-t2: hsl(0, 0%, 90%);
+$main-background-t2: hsl(0, 0%, 91%);
 $keypad-background-t2: hsl(0, 5%, 81%);
 $screen-background-t2: hsl(0, 0%, 93%);
 //keys
@@ -34,11 +34,29 @@ $dc-key-background-t2: hsl(185, 42%, 37%);
 $dc-key-shadow-t2: hsl(185, 58%, 25%);
 $o-key-background-t2: hsl(25, 98%, 40%);
 $do-key-shadow-t2: hsl(25, 99%, 27%);
-$gy-key-background: hsl(45, 7%, 89%);
-$go-key-shadow: hsl(35, 11%, 61%);
+$gy-key-background-t2: hsl(45, 7%, 89%);
+$go-key-shadow-t2: hsl(35, 11%, 61%);
 //text
 $dark-text-t2: hsl(60, 10%, 19%);
 $white-text-t2: $white-text-t1;
+
+//theme3
+
+//backgrounds
+$main-background-t3: hsl(268, 75%, 9%);
+$keypad-background-t3: hsl(268, 71%, 12%);
+$screen-background-t3: hsl(268, 71%, 12%);
+//keys
+$dv-key-background-t3: hsl(281, 89%, 26%);
+$vm-key-shadow-t3: hsl(285, 91%, 52%);
+$pc-key-background-t3: hsl(176, 100%, 44%);
+$sc-key-shadow-t3: hsl(177, 92%, 70%);
+$vdv-key-background-t3: hsl(268, 47%, 21%);
+$dm-key-shadow-t3: hsl(290, 70%, 36%);
+//text
+$dark-text-t3: hsl(198, 20%, 13%);
+$light-yellow-text-t3: hsl(52, 100%, 62%);
+$white-text-t3: $white-text-t1;
 
 //fonts
 $font-size: 32px;
