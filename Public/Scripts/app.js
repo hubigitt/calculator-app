@@ -45,6 +45,7 @@ function pushToMemory() {
     renderResult();
 }
 function setResult(result) {
+    if (result === NaN) digits = 0;
     digits = result;
     document
         .querySelector(".keypad__button--active")
@@ -91,17 +92,23 @@ function divide(a, b) {
 function equals(operator) {
     const a = parseFloat(memory);
     const b = parseFloat(digits);
-    if (operator === "add") {
-        add(a, b);
-    }
-    if (operator === "subtract") {
-        subtract(a, b);
-    }
-    if (operator === "multiply") {
-        multiply(a, b);
-    }
-    if (operator === "divide") {
-        divide(a, b);
+    if (!a || !b) {
+        alert("Something is missing, try again.");
+        digits = "";
+        setResult("");
+    } else {
+        if (operator === "add") {
+            add(a, b);
+        }
+        if (operator === "subtract") {
+            subtract(a, b);
+        }
+        if (operator === "multiply") {
+            multiply(a, b);
+        }
+        if (operator === "divide") {
+            divide(a, b);
+        }
     }
 }
 //EVENT LISTENERS
