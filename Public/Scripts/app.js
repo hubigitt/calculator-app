@@ -1,8 +1,10 @@
+import setTheme from "./themes.js";
+
 const keypad = document.querySelector(".keypad");
 const screen = document.getElementById("output__number");
-const resetBtn = document.getElementById("reset");
 const themeSlider = document.querySelector(".nav__theme__toggler__slider");
 const themeSliderDot = themeSlider.firstElementChild;
+const ls = localStorage;
 
 console.log(themeSlider);
 

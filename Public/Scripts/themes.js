@@ -1,7 +1,7 @@
 const d = document;
 const ls = localStorage;
 
-function setTheme(currentTheme) {
+export default function setTheme(currentTheme) {
     const body = d.body;
     const app = d.querySelector(".app");
     const themeSlider = d.querySelector(".nav__theme__toggler__slider");
@@ -76,12 +76,8 @@ function setTheme(currentTheme) {
     };
 
     theme1();
+
     if (currentTheme === 1) theme1();
     if (currentTheme === 2) theme2();
     if (currentTheme === 3) theme3();
-
-    // theme2();
-    // theme3();
 }
-
-// setTheme();
