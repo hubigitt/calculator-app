@@ -9,28 +9,20 @@ console.log(themeSlider);
 let memory = "";
 let digits = "";
 let activeOperation;
-let currentTheme = 1;
+let currentTheme = parseInt(ls.getItem("theme"));
 
 //THEME
 setTheme(currentTheme);
 
+console.log(ls.getItem("theme"));
+
 function changeThemeHandler() {
-    // const dot = themeSliderDot;
     const current = parseInt(
         themeSliderDot.className.charAt(themeSliderDot.className.length - 1)
     );
-    if (current === 3) {
-        // newClassName = "nav__theme__toggler__slider--1";
-        // newClassName2 = "nav__theme__toggler__slider--1--theme1";
-        currentTheme = 1;
-    } else {
-        // newClassName = `nav__theme__toggler__slider--${current + 1}`;
-        // newClassName2 = `nav__theme__toggler__slider--${current + 1}--theme${
-        //     current + 1
-        // }`;
-        currentTheme = current + 1;
-    }
-    // dot.className = `${newClassName} ${newClassName2}`;
+    if (current === 3) currentTheme = 1;
+    else currentTheme = current + 1;
+    ls.setItem("theme", currentTheme);
     setTheme(currentTheme);
 }
 
