@@ -20,20 +20,24 @@ function changeThemeHandler() {
     const current = parseInt(
         themeSliderDot.className.charAt(themeSliderDot.className.length - 1)
     );
-    if (current === 3) currentTheme = 1;
-    else currentTheme = current + 1;
+    currentTheme = current === 3 ? 1 : current + 1;
     ls.setItem("theme", currentTheme);
     theme.setTheme(currentTheme);
 }
-//EVENT LISTENERS
 
+//EVENT LISTENERS
 keypad.addEventListener("click", (event) => {
     const button = event.target;
     const id = button.id;
     if (parseInt(id) >= 0 && parseInt(id) < 10) {
-        if (digits === 0) digits = id;
-        else digits += id;
-        screen.textContent = utility.renderResult(digits);
+        if (activeOperation === "") {
+            activeOperation = "diho";
+            digits = id;
+            screen.textContent = utility.renderResult(digits);
+        } else {
+            digits = digits === 0 ? id : (digits += id);
+            screen.textContent = utility.renderResult(digits);
+        }
     } else {
         switch (id) {
             case "add":

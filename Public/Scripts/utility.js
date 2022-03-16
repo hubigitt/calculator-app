@@ -1,10 +1,8 @@
-//UTILITY FUNCTIONS
-
 export function renderResult(digits) {
     return digits.length === 0 ? 0 : digits;
 }
 export function pushToMemory(digits) {
-    return digits.length !== 0 ? digits : "";
+    return digits.length !== 0 ? digits : 0;
 }
 export function cleanDigits() {
     return 0;
