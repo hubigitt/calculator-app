@@ -1,12 +1,10 @@
 //UTILITY FUNCTIONS
 
 export function renderResult(digits) {
-    if (digits.length === 0) return 0;
-    else return digits;
+    return digits.length === 0 ? 0 : digits;
 }
 export function pushToMemory(digits) {
-    if (digits.length != 0) return digits;
-    else return;
+    return digits.length !== 0 ? digits : "";
 }
 export function cleanDigits() {
     return 0;

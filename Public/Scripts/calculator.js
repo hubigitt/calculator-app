@@ -8,8 +8,7 @@ function subtract(a, b) {
 }
 function multiply(a, b) {
     const result = a * b;
-    if (a === 0) return 0;
-    else return result.toFixed(3);
+    return a === 0 ? 0 : result.toFixed(3);
 }
 function divide(a, b, memory) {
     if (b === 0) {
@@ -26,7 +25,7 @@ export function equals(operator, memory, digits) {
     let result;
     if (digits === 0) {
         alert("Something is missing, try again.");
-        return "0";
+        return 0;
     } else {
         if (operator === "add") {
             result = add(a, b);
