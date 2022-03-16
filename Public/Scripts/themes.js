@@ -1,7 +1,7 @@
 const d = document;
 const ls = localStorage;
 
-export default function setTheme(currentTheme) {
+export function setTheme(currentTheme) {
     const body = d.body;
     const app = d.querySelector(".app");
     const themeSlider = d.querySelector(".nav__theme__toggler__slider");
